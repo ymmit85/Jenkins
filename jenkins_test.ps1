@@ -16,4 +16,4 @@ if (-not(Test-Path -Path 'C:\temp'))
 
 $svc = Get-Service  -Name $service| where {$_.Status -eq "Running"}
 
-Set-Content -Path "C:\temp\jenkins_1.txt" -Value $svc
+Set-Content -Path "C:\users\tim\temp\jenkins_1.txt" -Value $svc
