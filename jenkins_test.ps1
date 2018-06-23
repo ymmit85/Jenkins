@@ -4,6 +4,7 @@ Param
 	[Parameter(Mandatory=$false)]
 	[string]$service
 )
+write-host $(get-date)
 write-host "env $env:service"
 # Create Temp Directory
 if (-not(Test-Path -Path 'C:\temp'))
