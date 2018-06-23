@@ -7,9 +7,9 @@ Param
 write-host $(get-date)
 write-host "env $env:service"
 # Create Temp Directory
-if (-not(Test-Path -Path 'C:\temp'))
+if (-not(Test-Path -Path 'C:\users\tim\temp'))
 {
-    New-Item -Path 'C:\temp' -ItemType directory
+    New-Item -Path 'C:\users\tim\temp' -ItemType directory
 }
 
 # Using the environment variables exposed by the Jenkins job 
