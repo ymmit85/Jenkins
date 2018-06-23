@@ -1,5 +1,5 @@
 try {
-$svc = Get-Service -Name wuauserv; Set-Content -Value $svc -Path c:\temp\output.txt    
+$svc = Get-Service -Name wuaufserv; Set-Content -Value $svc -Path c:\temp\output.txt    
 }
 catch {
     write-host $error[0]
