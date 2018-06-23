@@ -1,3 +1,10 @@
+Param
+(
+	[CmdletBinding()]
+	[Parameter(Mandatory=$false)]
+	[string]$service
+)
+
 # Create Temp Directory
 if (-not(Test-Path -Path 'C:\temp'))
 {
@@ -6,6 +13,6 @@ if (-not(Test-Path -Path 'C:\temp'))
 
 # Using the environment variables exposed by the Jenkins job 
 
-$svc = Get-Service | where {$_.Status -eq "Running"}
+$svc = Get-Service  -Name $service| where {$_.Status -eq "Running"}
 
 Set-Content -Path "C:\temp\jenkins_1.txt" -Value $svc
