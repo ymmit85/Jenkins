@@ -12,4 +12,4 @@ write-host $env:service
 
 $svc = Get-Service -Name $service
 
-Set-Content -Path "C:\users\tim\temp\jenkins_1.txt" -Value $svc
+Set-Content -Path "C:\temp\jenkins_1.txt" -Value $svc
