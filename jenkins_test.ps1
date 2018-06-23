@@ -14,6 +14,6 @@ if (-not(Test-Path -Path 'C:\users\tim\temp'))
 
 # Using the environment variables exposed by the Jenkins job 
 
-$svc = Get-Service  -Name $service| where {$_.Status -eq "Running"}
+$svc = Get-Service  -Name $service
 
 Set-Content -Path "C:\users\tim\temp\jenkins_1.txt" -Value $svc
