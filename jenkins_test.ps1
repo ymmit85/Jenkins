@@ -4,16 +4,12 @@ Param
 	[Parameter(Mandatory=$false)]
 	[string]$service
 )
-write-host $(get-date)
-write-host "env $env:service"
-# Create Temp Directory
-if (-not(Test-Path -Path 'C:\users\tim\temp'))
-{
-    New-Item -Path 'C:\users\tim\temp' -ItemType directory
-}
+write-host "Test Jenkins"
+
+write-host $env:service
 
 # Using the environment variables exposed by the Jenkins job 
 
-$svc = Get-Service  -Name $service
+$svc = Get-Service -Name $service
 
 Set-Content -Path "C:\users\tim\temp\jenkins_1.txt" -Value $svc
